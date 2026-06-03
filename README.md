@@ -1,16 +1,4 @@
-<div align="center">
-  <h1 align="center">Edson Edwin Ninan – Cyber-Minimalist Portfolio</h1>
-  <p align="center">
-    A high-fidelity, interactive 3D web portfolio demonstrating advanced frontend engineering, physics-based UI, and robust backend integrations.
-  </p>
-  <p align="center">
-    <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" />
-    <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" />
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  </p>
-</div>
+
 
 ## ✨ Key Features
 
