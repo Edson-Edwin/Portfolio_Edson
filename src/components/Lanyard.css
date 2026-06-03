@@ -1,0 +1,16 @@
+.lanyard-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Let clicks pass through except on the lanyard */
+}
+
+.lanyard-wrapper canvas {
+  pointer-events: auto; /* Only the canvas should receive pointer events */
+}
