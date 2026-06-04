@@ -23,30 +23,17 @@ export default function StartProjectModal({ isOpen, onClose }: Props) {
     
     const formattedMessage = `START A PROJECT INQUIRY\n\nName: ${name}\nEmail: ${email}\n\nProject Details:\n${details}`;
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: formattedMessage, rating: 5 }), // Rating sent for compatibility
-      });
+    window.location.href = `mailto:edsonedwin01@gmail.com?subject=${encodeURIComponent(`Project Inquiry from ${name}`)}&body=${encodeURIComponent(formattedMessage)}`;
       
-      if (response.ok) {
-        setShowSuccess(true);
-        setTimeout(() => {
-          setShowSuccess(false);
-          setName('');
-          setEmail('');
-          setDetails('');
-          onClose();
-        }, 3000);
-      } else {
-        alert("Failed to send. Please try again.");
-      }
-    } catch (error) {
-      alert("Error sending request.");
-    } finally {
+    setShowSuccess(true);
+    setTimeout(() => {
+      setShowSuccess(false);
+      setName('');
+      setEmail('');
+      setDetails('');
+      onClose();
       setIsSubmitting(false);
-    }
+    }, 3000);
   };
 
   return (

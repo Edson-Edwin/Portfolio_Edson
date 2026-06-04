@@ -16,30 +16,18 @@ export default function Contact() {
     
     setIsSubmitting(true);
     
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, rating }),
-      });
-      
-      if (response.ok) {
-        setShowSuccess(true);
-        setMessage('');
-        setRating(0);
-        
-        // Hide success popup after 4 seconds
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 4000);
-      } else {
-        alert("Failed to send transmission. Please try again.");
-      }
-    } catch (error) {
-      alert("Error sending transmission.");
-    } finally {
+    const bodyText = `Rating: ${rating} / 5 Stars\n\nMessage:\n${message}`;
+    window.location.href = `mailto:edsonedwin01@gmail.com?subject=${encodeURIComponent('Portfolio Feedback & Rating! ⭐')}&body=${encodeURIComponent(bodyText)}`;
+    
+    setShowSuccess(true);
+    setMessage('');
+    setRating(0);
+    
+    // Hide success popup after 4 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
       setIsSubmitting(false);
-    }
+    }, 4000);
   };
 
   return (
